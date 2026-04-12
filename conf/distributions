@@ -1,5 +1,9 @@
-Codename: stable
+Origin: guarinogio
+Label: kbd-auto-layout
 Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64 all
 Components: main
-Architectures: amd64
+Description: APT repository for kbd-auto-layout
 SignWith: B815D1A3EFE1740E
