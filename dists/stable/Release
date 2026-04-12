@@ -1,17 +1,21 @@
+Origin: guarinogio
+Label: kbd-auto-layout
 Suite: stable
 Codename: stable
-Date: Sun, 12 Apr 2026 01:32:08 UTC
+Version: 1.0
+Date: Sun, 12 Apr 2026 01:41:45 UTC
 Architectures: amd64
 Components: main
+Description: APT repository for kbd-auto-layout
 MD5Sum:
  0a02980ebc49551200959b6d9a0e29cf 864 main/binary-amd64/Packages
  f116961bd422b1dbec8903f93102dd51 556 main/binary-amd64/Packages.gz
- 82a1ae90445e5284617f8a8cc3a53fa4 52 main/binary-amd64/Release
+ 950019c4915495c29bee6d7abf90131d 155 main/binary-amd64/Release
 SHA1:
  5a19b26ea6294e30a2b208676aedc0c748793896 864 main/binary-amd64/Packages
  cfe69b50b6c9901ecb46ac8aa94f080ebc2b21d4 556 main/binary-amd64/Packages.gz
- 9b61d92e2c42866227d305db51276f4714da5cd9 52 main/binary-amd64/Release
+ 572b6e6f11ed55290a74d5e6050ccdbf5eb2a176 155 main/binary-amd64/Release
 SHA256:
  3a9e9a1a3f5c857347d87c50b3db8493847afa8220ef0b7c626f6d45a44b8d37 864 main/binary-amd64/Packages
  b19a49845864dcaeeae2c1e9702674d4c062e7ec1fb11a2417932fcf862118d7 556 main/binary-amd64/Packages.gz
- 5d14a4f1b270a16b7797dfa013f0d0d3325c616762714c6e9a34295a4d9be351 52 main/binary-amd64/Release
+ 28f2d5ecbf42142c62822270e0b4bb2e715f26874a54dcde9ca35f26b427bbe6 155 main/binary-amd64/Release
