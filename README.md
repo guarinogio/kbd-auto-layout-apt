@@ -1,5 +1,8 @@
 # kbd-auto-layout APT Repository
 
+[![Source Repository](https://img.shields.io/badge/source-kbd--auto--layout-blue)](https://github.com/guarinogio/kbd-auto-layout)
+[![Latest Release](https://img.shields.io/github/v/release/guarinogio/kbd-auto-layout)](https://github.com/guarinogio/kbd-auto-layout/releases/latest)
+
 APT repository for `kbd-auto-layout`.
 
 ## Add the repository
