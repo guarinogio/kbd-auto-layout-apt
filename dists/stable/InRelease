@@ -6,35 +6,35 @@ Label: kbd-auto-layout
 Suite: stable
 Codename: stable
 Version: 1.0
-Date: Fri, 01 May 2026 13:30:15 UTC
+Date: Fri, 01 May 2026 13:41:11 UTC
 Architectures: amd64
 Components: main
 Description: APT repository for kbd-auto-layout
 MD5Sum:
- 5bc81f4fecc7fc67321fe30c82b1b8e3 865 main/binary-amd64/Packages
- aab45ea79053409b6317850317754e98 556 main/binary-amd64/Packages.gz
+ 94c3f88a4808604abc62937952e0a76a 865 main/binary-amd64/Packages
+ f0c1a39b8d7d190401b4c31c518d7540 556 main/binary-amd64/Packages.gz
  950019c4915495c29bee6d7abf90131d 155 main/binary-amd64/Release
 SHA1:
- 551343e6b7b22ad229d38c429d855b67e72daa33 865 main/binary-amd64/Packages
- 1c7633c5533c4044caf9f19d6fe0d59fa5897ab0 556 main/binary-amd64/Packages.gz
+ 2d950674f4c83e08db115eaf2992dc2bcb33aa05 865 main/binary-amd64/Packages
+ 876c6d871d41ba2fa24ed768e1ff0ff107641739 556 main/binary-amd64/Packages.gz
  572b6e6f11ed55290a74d5e6050ccdbf5eb2a176 155 main/binary-amd64/Release
 SHA256:
- 258a735d1766b2ab36a07f8066b773762ccb84ad362bdcff07b79fd4e8baf425 865 main/binary-amd64/Packages
- ecb301b8216672d7b9f8eecbf6639ca4f3a30776f30d21f8196f4a70dbafbb7d 556 main/binary-amd64/Packages.gz
+ a49178cd8a71a280d88cefcab4e84942b98c13466e95c3b782d7ba0e9d2a9897 865 main/binary-amd64/Packages
+ af5bd6e55be446ba4590e7667652845c0876072102bf8ebe0a0603e7ba1ab2ea 556 main/binary-amd64/Packages.gz
  28f2d5ecbf42142c62822270e0b4bb2e715f26874a54dcde9ca35f26b427bbe6 155 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEENbaT7UrwjG6Ljwl2uBXRo+/hdA4FAmn0qucACgkQuBXRo+/h
-dA7qzA//cujwzcHq0dnWUIj6LARfdjB3tH3AwpGr3ncAXTiIZE1zvv9MEEPFMf0m
-YKMTreWh7uorIzsvgUyfSPGwmYi//qmWTtiZ69THo/ZXDtKAHE7jtr/7IEqMwpBm
-ObsKe2STh2mTKq1wgpIl/Tq5zbGNXg63OZ6S69i2IT0eLsfyQN5pbUBwXXaKtqDt
-CJ8Lyj4fHQodrZslLm7E5m3Dly/Yhj2mmf/Hh6la70X5egQTv3+Zo7EB8TGbcAgS
-iboBKz9NNmdjtGelBd5sswN3zP+FQVk0vXFIpghPQ9F1YsEzmcnZs37RDuwHx7gX
-UrqJV52IKJ8pbnpDZERKZT5WN3Hc8ddjosKRZer1157o1WpDp+lfr2UmA9CaPZmw
-0IsgfccBY6YAzmcALBnAG7fX0WTUeLfr//T3OfRnY2m7UHdNaoPAXx1AEkJN25Cu
-VjIxhiZS0p3Oeq8GHGyMWRV7vUwJC811ugClDqy789LYAE3l8vviMXsXjjfmM/ig
-pQh8anTi98HqN97UGN/VZxjx/wBTlaSIJs7rlOmGXGIs7TiRn56ydgbyy/GEkAMi
-eXxsVzdm2oCJz+eIHvBFBP9sB4xCczGo1/vwi3v7vxVUiXW+pfMc9RpLeB2VkD4/
-bth5kSAtxlGb8GUr7yn+Bvs1Ajn+sCY7Pz2L2J/ZqzOusy3GXjM=
-=zBE5
+iQIzBAEBCgAdFiEENbaT7UrwjG6Ljwl2uBXRo+/hdA4FAmn0rXcACgkQuBXRo+/h
+dA6etA//RvEMggbu8B9OAOPn6/2ov4uEG1UGqO1yjVXaaUMscCV8CKFJK4Vc5pc4
+Ec6/RIi5Y0YNEN2TEd2J7x3AKkALVZMO6mn2B1iiBPxjy2YOfAt91UIasbQBxnho
+EnW6cCmF/+gMfCHkSS/ZD8dj1v/SUY+9QLAhTw8r3NlTFbCTKwArL481p9iEjO2g
+xw2g293XAs3D3/NIFl+WDOfAyl7OTrA3sxCIxnY4n3NUYAFNmxyBmT0jxY0DS7Ky
+f6w8HC1GTxZLkfYjop+gQXDawiKVdS1+QZP+XfalmZ9coH3esOs4JZtXTvMfv4VS
+hlVrQTPpa3ldCT4klqFd1584yuJy7CvUUyHjyFFE5loHV5jq/zWzUo6/ZAa/4126
+MasCj5vVgE4CJTtBr4cVgjkJY3xJjYgSvoTHKYILtTQgjxbjBbykyp88R86BGJ7E
+UXQln+z/GU9NB9dBe4Ij+Vlcsp+8fWN6o2zh6516+zigAyGVB8t6IINDIO11jnDB
+Dbmx4kb3lqu77gCatZ2Lo9EdCu2kz7w1dgnbU2B0MH8kT4ksiLU0pJ/V2KZ4DXrk
+ti7qR/SWLWP02xTCQYYYVtzaGWZrgKDREyVMrLuSdKroR0KOjTdjk94Ro2FwYzlF
+u23ngCwS9E1k65BFceEwGSJlYxGmmSkpJ7Ti068eWA/KdUKRAG0=
+=0ZCl
 -----END PGP SIGNATURE-----
