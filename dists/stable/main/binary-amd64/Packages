@@ -1,17 +1,17 @@
 Package: kbd-auto-layout
-Version: 1.0.9
+Version: 1.1.0
 Architecture: all
 Maintainer: Gio Guarino <gio@example.com>
-Installed-Size: 79
+Installed-Size: 91
 Depends: init-system-helpers (>= 1.52), python3:any, python3, xinput, x11-xkb-utils, systemd
 Homepage: https://github.com/guarinogio/kbd-auto-layout
 Priority: optional
 Section: utils
-Filename: pool/main/k/kbd-auto-layout/kbd-auto-layout_1.0.9_all.deb
-Size: 14200
-SHA256: af8d4db4a098847f43fe9b935070f3c7920719f4c0a0be170e0213a79624eec1
-SHA1: cbb31db67c43a44b58d78bd3cb9d04d05976696b
-MD5sum: d62c99e357c83e47ef2b1fbcc13f4a8a
+Filename: pool/main/k/kbd-auto-layout/kbd-auto-layout_1.1.0_all.deb
+Size: 16396
+SHA256: d90e84bb802eaef65cf8e65342dc37a36ca615b1506fceaeeb5b6a2879fbe310
+SHA1: 5afb6fd985d9e4a6627561961def076a0f3ab887
+MD5sum: aa78d977e39d24903b46e38cefd0ef0f
 Description: Automatic keyboard layout switching for X11 based on connected keyboards
  kbd-auto-layout provides:
   - a background daemon to monitor connected keyboards
