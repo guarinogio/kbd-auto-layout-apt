@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kbd-auto-layout — Automatic keyboard layout switching for Linux</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+.container { max-width: 860px; margin: 0 auto; padding: 32px 20px; }
+
+.hero { text-align: center; padding: 60px 0 40px; }
+.hero h1 { font-size: 42px; color: #c084fc; margin-bottom: 8px; }
+.hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; }
+.badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.badge { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 4px 12px; font-size: 13px; color: #8b949e; }
+.badge a { color: #58a6ff; text-decoration: none; }
+
+.install-box { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin: 32px 0; }
+.install-box h2 { color: #c084fc; font-size: 20px; margin-bottom: 16px; }
+.install-box code { display: block; background: #0d1117; padding: 12px 16px; border-radius: 8px; color: #3fb950; font-size: 14px; overflow-x: auto; margin: 8px 0; white-space: pre-wrap; word-break: break-all; }
+.install-box .step { color: #8b949e; font-size: 13px; margin-top: 4px; }
+
+h2 { font-size: 24px; color: #c084fc; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #30363d; }
+h3 { font-size: 18px; color: #58a6ff; margin: 24px 0 8px; }
+
+.opt-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.opt-table th, .opt-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #21262d; font-size: 14px; }
+.opt-table th { color: #8b949e; font-weight: 600; }
+.opt-table td:first-child { font-family: monospace; color: #3fb950; white-space: nowrap; }
+.opt-table td:last-child { color: #8b949e; }
+
+.config-block { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin: 12px 0; overflow-x: auto; }
+.config-block pre { font-size: 13px; color: #e6edf3; }
+.section-comment { color: #8b949e; }
+.key { color: #79c0ff; }
+.value { color: #a5d6ff; }
+.str { color: #a5d6ff; }
+.comment { color: #8b949e; }
+
+ul, ol { padding-left: 24px; margin: 12px 0; }
+li { margin: 6px 0; font-size: 15px; }
+p { margin: 12px 0; font-size: 15px; }
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.faq dt { font-weight: 600; color: #e6edf3; margin-top: 20px; }
+.faq dd { color: #8b949e; margin-left: 0; margin-top: 6px; }
+
+footer { text-align: center; padding: 40px 0; color: #8b949e; font-size: 13px; border-top: 1px solid #30363d; margin-top: 60px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+    <h1>kbd-auto-layout</h1>
+    <p class="tagline">Automatic keyboard layout switching for Linux</p>
+    <div class="badge-row">
+        <div class="badge">MIT License</div>
+        <div class="badge">Debian/Ubuntu</div>
+        <div class="badge">X11 • Wayland+GNOME</div>
+        <div class="badge">Python 3.10+</div>
+        <div class="badge"><a href="https://github.com/guarinogio/kbd-auto-layout">GitHub</a></div>
+    </div>
+</div>
+
+<!-- ====================== INSTALL ====================== -->
+<h2>📦 Install</h2>
+<div class="install-box">
+    <p class="step"><strong>1. Add the signing key</strong></p>
+    <code>curl -fsSL https://guarinogio.github.io/kbd-auto-layout-apt/public.key \
+  | sudo gpg --dearmor --yes -o /usr/share/keyrings/kbd-auto-layout.gpg</code>
+
+    <p class="step"><strong>2. Add the APT repository</strong></p>
+    <code>echo "deb [signed-by=/usr/share/keyrings/kbd-auto-layout.gpg] https://guarinogio.github.io/kbd-auto-layout-apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/kbd-auto-layout.list</code>
+
+    <p class="step"><strong>3. Install</strong></p>
+    <code>sudo apt update && sudo apt install kbd-auto-layout</code>
+
+    <p class="step"><strong>4. Enable the service</strong></p>
+    <code>systemctl --user enable --now kbd-auto-layoutd</code>
+</div>
+
+<!-- ====================== USAGE ====================== -->
+<h2>🚀 Quick Start</h2>
+
+<h3>Automatic setup (wizard)</h3>
+<code style="display:block;background:#0d1117;padding:12px 16px;border-radius:8px;color:#3fb950;margin:8px 0;">kbd-auto-layoutctl setup</code>
+<p>The wizard detects your keyboards, asks which one to use for US English, and creates the rule for you.</p>
+
+<h3>Manual configuration</h3>
+<p>Edit <code style="color:#3fb950">~/.config/kbd-auto-layout/config.ini</code>:</p>
+<div class="config-block"><pre>
+<span class="section-comment">[general]</span>
+<span class="key">default_layout</span> = <span class="str">es</span>
+<span class="key">default_variant</span> = <span class="str">nodeadkeys</span>
+<span class="key">poll_interval</span> = <span class="str">2</span>
+<span class="key">backend</span> = <span class="str">auto</span>
+
+<span class="section-comment">[device "Keychron K2 Max"]</span>
+<span class="key">layout</span> = <span class="str">us</span>
+<span class="key">match</span> = <span class="str">contains</span>
+<span class="key">priority</span> = <span class="str">20</span></pre></div>
+
+<!-- ====================== COMMANDS ====================== -->
+<h2>⌨️ Commands</h2>
+
+<h3>kbd-auto-layoutctl</h3>
+<table class="opt-table">
+    <tr><th>Command</th><th>Description</th></tr>
+    <tr><td>setup</td><td>Interactive setup wizard — detects keyboards and creates rules</td></tr>
+    <tr><td>detect</td><td>List connected keyboards with suggested configuration commands</td></tr>
+    <tr><td>use-current-keyboard &lt;layout&gt;</td><td>Create a rule for the currently connected keyboard</td></tr>
+    <tr><td>rules</td><td>List all configured device rules</td></tr>
+    <tr><td>explain</td><td>Show why a specific rule was selected</td></tr>
+    <tr><td>status</td><td>Show current layout, active rule, and detected keyboards</td></tr>
+    <tr><td>doctor</td><td>Diagnostic check of the entire system</td></tr>
+    <tr><td>enable / disable / restart</td><td>Manage the daemon service</td></tr>
+    <tr><td>config</td><td>Open the config file in your editor</td></tr>
+    <tr><td>watch</td><td>Live monitor: watch layout changes in real time</td></tr>
+</table>
+
+<h3>kbd-auto-layoutd</h3>
+<table class="opt-table">
+    <tr><th>Option</th><th>Description</th></tr>
+    <tr><td>--verbose</td><td>Enable debug logging</td></tr>
+    <tr><td>--version</td><td>Show version</td></tr>
+</table>
+
+<!-- ====================== CONFIG REFERENCE ====================== -->
+<h2>⚙️ Configuration Reference</h2>
+
+<h3>[general]</h3>
+<table class="opt-table">
+    <tr><th>Option</th><th>Default</th><th>Description</th></tr>
+    <tr><td>default_layout</td><td>us</td><td>Layout when no device rule matches</td></tr>
+    <tr><td>default_variant</td><td></td><td>XKB variant (e.g. nodeadkeys, dvorak)</td></tr>
+    <tr><td>poll_interval</td><td>2</td><td>Seconds between device checks (polling mode)</td></tr>
+    <tr><td>backend</td><td>auto</td><td>auto, x11, gnome-wayland, wayland</td></tr>
+    <tr><td>event_mode</td><td>auto</td><td>auto, udev, polling</td></tr>
+    <tr><td>event_timeout</td><td>30.0</td><td>Seconds before falling back to polling</td></tr>
+    <tr><td>apply_retries</td><td>5</td><td>How many times to retry setxkbmap</td></tr>
+    <tr><td>apply_retry_delay</td><td>1.0</td><td>Seconds between retries</td></tr>
+    <tr><td>device_cache_ttl</td><td>2.0</td><td>Seconds to cache device enumeration</td></tr>
+</table>
+
+<h3>[device "name"]</h3>
+<table class="opt-table">
+    <tr><th>Option</th><th>Default</th><th>Description</th></tr>
+    <tr><td>layout</td><td><em>required</em></td><td>Layout to apply (e.g. us, es, fr)</td></tr>
+    <tr><td>variant</td><td></td><td>XKB variant</td></tr>
+    <tr><td>match</td><td>exact</td><td>exact (full name) or contains (substring)</td></tr>
+    <tr><td>priority</td><td>10</td><td>Higher = wins when multiple rules match</td></tr>
+    <tr><td>vendor_id</td><td></td><td>USB vendor ID (decimal). Omit for Bluetooth</td></tr>
+    <tr><td>product_id</td><td></td><td>USB product ID (decimal). Omit for Bluetooth</td></tr>
+</table>
+
+<!-- ====================== FAQ ====================== -->
+<h2>❓ FAQ</h2>
+<dl class="faq">
+    <dt>My Bluetooth keyboard doesn't switch layouts</dt>
+    <dd>Bluetooth keyboards often don't report hardware IDs. Use <code>match = contains</code> and <strong>omit</strong> vendor_id/product_id from the rule. Run <code>kbd-auto-layoutctl detect</code> to see the exact device name, then use a substring of it.</dd>
+
+    <dt>What's the difference between "exact" and "contains" matching?</dt>
+    <dd><code>exact</code> matches the full device name. <code>contains</code> matches if the device name contains your pattern. Use contains for Bluetooth keyboards where the name may vary slightly.</dd>
+
+    <dt>Does this work on Wayland?</dt>
+    <dd>Yes, with GNOME. Set <code>backend = auto</code> (default). For other Wayland compositors, the daemon will gracefully fall back and log a warning.</dd>
+
+    <dt>Can I use multiple external keyboards with different layouts?</dt>
+    <dd>Yes. Create one <code>[device]</code> section per keyboard. Rules with higher priority win when multiple match.</dd>
+
+    <dt>How do I uninstall?</dt>
+    <dd><code>sudo apt remove kbd-auto-layout</code> then remove the APT source file and GPG key.</dd>
+</dl>
+
+<!-- ====================== FOOTER ====================== -->
+<footer>
+    <p><strong>kbd-auto-layout</strong> — MIT License</p>
+    <p><a href="https://github.com/guarinogio/kbd-auto-layout">GitHub</a> · <a href="https://github.com/guarinogio/kbd-auto-layout/issues">Report a bug</a></p>
+</footer>
+
+</div>
+</body>
+</html>
