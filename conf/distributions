@@ -3,7 +3,7 @@ Label: kbd-auto-layout
 Suite: stable
 Codename: stable
 Version: 1.0
-Architectures: amd64
+Architectures: all
 Components: main
 Description: APT repository for kbd-auto-layout
 SignWith: B815D1A3EFE1740E
