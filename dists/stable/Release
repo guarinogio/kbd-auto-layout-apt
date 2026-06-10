@@ -3,19 +3,19 @@ Label: kbd-auto-layout
 Suite: stable
 Codename: stable
 Version: 1.0
-Date: Fri, 01 May 2026 13:49:47 UTC
+Date: Wed, 10 Jun 2026 22:54:25 UTC
 Architectures: amd64
 Components: main
 Description: APT repository for kbd-auto-layout
 MD5Sum:
- 59c3ba968b27a67ff4b1876b31eebdcf 865 main/binary-amd64/Packages
- eed45f730a2549ccbb532702a285116e 556 main/binary-amd64/Packages.gz
+ ee3cd4ee726cf64be1555d14ebe96751 875 main/binary-amd64/Packages
+ 925c3d55da5e8fe6403449cb823eca98 559 main/binary-amd64/Packages.gz
  950019c4915495c29bee6d7abf90131d 155 main/binary-amd64/Release
 SHA1:
- ba536231ce1864fddfa18598e3b80f2cf5d4dbf4 865 main/binary-amd64/Packages
- b0771547388cad6ff5a797e98c4281961ea77182 556 main/binary-amd64/Packages.gz
+ d6354663b5b4b30072c9ad2cab1745a703e9de8c 875 main/binary-amd64/Packages
+ 5c79b5d06d90e77f558ea1370ace863bfa109105 559 main/binary-amd64/Packages.gz
  572b6e6f11ed55290a74d5e6050ccdbf5eb2a176 155 main/binary-amd64/Release
 SHA256:
- 58817e9446228e3371c3e34eb3c7b8654a497e46743788c9f81c37224c86c7d0 865 main/binary-amd64/Packages
- c7d7f5015f06ab12cd69472b9ef6d3c406c0e71a455a50c12bde106daa7f4a3e 556 main/binary-amd64/Packages.gz
+ c92adada0512da412027fb1ada6cdcc6c877bb76cc55fde42de325407f7dd057 875 main/binary-amd64/Packages
+ c13666440efb15b8f73b7ba77c0154cb9299f8d10d1ed6f73355faf5875170bc 559 main/binary-amd64/Packages.gz
  28f2d5ecbf42142c62822270e0b4bb2e715f26874a54dcde9ca35f26b427bbe6 155 main/binary-amd64/Release
